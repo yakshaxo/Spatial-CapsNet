@@ -31,9 +31,19 @@ python evaluate.py --model_path ./path_to_model.pth
 📈 Performance
 CapsNet is designed to achieve high accuracy on MNIST (~99%) while requiring significantly less data to understand spatial variances compared to standard CNNs.
 
-📖 Reference
-This project is based on the paper:
-Sabour, Sara, Nicholas Frosst, and Geoffrey E. Hinton. "Dynamic routing between capsules." Advances in neural information processing systems 30 (2017).
+
+
+Classification of Images using Capsule Networks (CapsNet)
+
+Traditional Convolutional Neural Networks (CNNs) rely on "Pooling" layers, which often discard critical information regarding the position and orientation of objects. This project implements a Capsule Network architecture that treats features as vectors rather than scalars.
+
+How it works:
+
+Vector Representations: Instead of simple neurons, the model uses "Capsules"—groups of neurons that represent the properties (pose, scale, texture) of an entity.
+
+Dynamic Routing: Replaces Max-Pooling with a "Routing-by-Agreement" mechanism. This ensures that the network understands that a face is only a face if the eyes, nose, and mouth are in the correct relative positions.
+
+Spatial Invariance: Achieves significantly better performance on rotated or skewed datasets compared to traditional deep learning models.
 
 Maintained by krayem louay
 
